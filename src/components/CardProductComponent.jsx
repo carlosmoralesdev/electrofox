@@ -14,12 +14,12 @@ import {
           <img
             src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80"
             alt="card-image"
-            className="h-full w-full object-cover"
+            className="rounded-xl cardimg-settings h-full w-full object-cover"
           />
         </CardHeader>
         <CardBody>
-          <div className="mb-2 flex items-center justify-between">
-            <Typography color="blue-gray" className="font-medium">
+          <div className="mb-2 items-center">
+            <Typography style={{margin: '0px'}} color="blue-gray" className="font-medium text-center">
               Apple AirPods
             </Typography>
             <Typography color="blue-gray" className="font-medium">

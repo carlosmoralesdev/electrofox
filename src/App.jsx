@@ -6,6 +6,7 @@ import './App.css'
 import { CarouselComponent } from './components/CarouselComponent';
 import { NavbarComponent } from './components/NavbarComponent';
 import { CardProductComponent } from './components/CardProductComponent';
+import { Catalogue } from './pages/Catalogue';
 
 function App() {
 
@@ -16,9 +17,12 @@ function App() {
   return (
     <>
       <NavbarComponent></NavbarComponent>
-      <div style={{width: '300px', height: '200px'}}>
+      {/* <div style={{maxWidth: '280px', margin: 'auto'}}>
         <CardProductComponent />
-      </div>
+        <CardProductComponent />
+        <CardProductComponent />
+      </div> */}
+      <Catalogue />
       {/* <CarouselComponent></CarouselComponent> */}
     </>
   )
