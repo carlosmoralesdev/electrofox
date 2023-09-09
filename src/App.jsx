@@ -4,6 +4,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { CarouselComponent } from './components/CarouselComponent';
+import { NavbarComponent } from './components/NavbarComponent';
+import { CardProductComponent } from './components/CardProductComponent';
 
 function App() {
 
@@ -12,7 +14,13 @@ function App() {
   ])
 
   return (
-    <CarouselComponent></CarouselComponent>
+    <>
+      <NavbarComponent></NavbarComponent>
+      <div style={{width: '300px', height: '200px'}}>
+        <CardProductComponent />
+      </div>
+      {/* <CarouselComponent></CarouselComponent> */}
+    </>
   )
 }
 
