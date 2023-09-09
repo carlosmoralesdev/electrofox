@@ -7,6 +7,7 @@ import { CarouselComponent } from './components/CarouselComponent';
 import { NavbarComponent } from './components/NavbarComponent';
 import { CardProductComponent } from './components/CardProductComponent';
 import { Catalogue } from './pages/Catalogue';
+import "./App.css"
 
 function App() {
 
