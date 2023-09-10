@@ -7,12 +7,15 @@ import {
     Button,
   } from "@material-tailwind/react";
    
-  export function CardProductComponent() {
+  export function CardProductComponent(props) {
+
+    const { img, title, price, description, id, offer, offerPrice } = props
+
     return (
       <Card className="w-96">
-        <CardHeader shadow={false} floated={false} className="h-96">
+        <CardHeader shadow={false} floated={false} className="background-transparent">
           <img
-            src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80"
+            src={img}
             alt="card-image"
             className="rounded-xl cardimg-settings h-full w-full object-cover"
           />
@@ -20,22 +23,31 @@ import {
         <CardBody>
           <div className="mb-2 items-center">
             <Typography style={{margin: '0px'}} color="blue-gray" className="font-medium text-center">
-              Apple AirPods
+              <b>{title}</b>
             </Typography>
             <Typography color="blue-gray" className="font-medium">
-              $95.00
+              {offer ? 
+              <>
+                <b className="text-color-green">${offerPrice + " (Oferta)"}</b>
+                <a>{" "}</a>
+                <a className="text-medium-line">{' $' + price}</a>
+              </>
+              :
+              <>
+                ${price}
+              </>
+              }
             </Typography>
           </div>
           <Typography
             variant="small"
             color="gray"
-            className="font-normal opacity-75"
+            className="font-normal opacity-75 text-2lines"
           >
-            With plenty of talk and listen time, voice-activated Siri access, and
-            an available wireless charging case.
+            {description}
           </Typography>
         </CardBody>
-        <CardFooter className="pt-0">
+{/*         <CardFooter className="pt-0">
           <Button
             ripple={false}
             fullWidth={true}
@@ -43,7 +55,7 @@ import {
           >
             Ver
           </Button>
-        </CardFooter>
+        </CardFooter> */}
       </Card>
     );
   }
